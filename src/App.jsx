@@ -80,15 +80,15 @@ import List from "./Components/List.jsx";
 
 // export default App;
 
-import React from 'react'
+
 
 import Component from './Mycomponents.jsx'
-import Counter from "./Counter.jsx";
+
 const App = () => {
  
   return(<>
     {/* <Component /> */}
-    <Counter />
+<Component />
     </>
   )
 }
