@@ -82,16 +82,17 @@ import List from "./Components/List.jsx";
 
 
 
-import Component from './Mycomponents.jsx'
-
+import Colorpicker from "./Components/Colorpicker.jsx";
+import Mycomponents from "./Mycomponents.jsx";
 const App = () => {
  
-  return(<>
-    {/* <Component /> */}
-<Component />
+  return(
+  <>
+ 
+<Mycomponents/>
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;
 
