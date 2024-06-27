@@ -82,11 +82,11 @@ import List from "./Components/List.jsx";
 
 
 
-import Mycomponent from "./Mycomponent.jsx";
+import Todolist from "./Components/Todolist.jsx";
 const App = () => {
   return(
  <>
- <Mycomponent />
+ <Todolist />
 
  </>
   )
