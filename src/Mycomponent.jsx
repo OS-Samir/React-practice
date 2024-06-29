@@ -221,7 +221,7 @@
 
 //   function handleRemoveCar(index) {
 //     setCars(c => c.filter((_, i)=> i !== index));
-   
+
 //   }
 
 //   function handleYearChange(event) {
@@ -239,7 +239,7 @@
 //     <div>
 //       <h2>List of car objects</h2>
 //       <ul>
-//         {cars.map((car, index) => 
+//         {cars.map((car, index) =>
 //           <li key={index} onClick={() => handleRemoveCar(index)}>
 //             {car.year} {car.make} {car.model}
 //           </li>)}
@@ -268,33 +268,79 @@
 
 // export default Mycomponent;
 
+// import { useState, useEffect } from "react";
+
+// const Mycomponent = () => {
+//   const [count, setCount] = useState(0);
+//   const [color, setColor] = useState("red");
+
+//   useEffect(() => {
+//     document.title = `Count: ${count} ${color}`;
+//   }, [count, color]);
+
+//   function increment() {
+//     setCount((c) => c + 1);
+//   }
+//   function decrement() {
+//     setCount((c) => c - 1);
+//   }
+
+//   function changeColor() {
+//     setColor(c => c === "green" ? "red" : "green");
+//   }
+
+//   return (
+//     <div>
+//       <h1 style={{ color: color }}>Count : {count}</h1>
+//       <button onClick={increment}>Add count</button>
+//       <br />
+//       <br />
+
+//       <button onClick={decrement}> Subtract Count</button>
+//       <br />
+//       <br />
+//       <button onClick={changeColor}> Change colour</button>
+//     </div>
+//   );
+// };
+
+// export default Mycomponent;
 
 import { useState, useEffect } from "react";
 
-function MyComponent  () {
-const [count, setCount] = useState(0);
-
-useEffect (() => {
-  document.title = `Count: ${count}`;
-}, []);
-
-function increment() {
-  setCount(c => c +  1);
- 
 
 
-}
+const Mycomponent = () => {
+    
+  const [width, setWidth] = useState(window.innerWidth);
+  const [height, setHeight] = useState(window.innerHeight);
 
+  useEffect(() =>{
+    
+  window.addEventListener("resize", handleResize);
+  console.log("Event listener added");
+  return () => {
+    window.removeEventListener("resize", handleResize);
+    console.log("Event listener removed");
+  }
 
-  return (
-    <>
+  },[]);
 
-      <p>Count: {count}</p>
-      <button onClick={increment}>Add</button>
-      </>
-  );
+  useEffect(() => {
+  
+    document.title = `Size: ${width} x ${height}`
+  }, [width, height]);
 
+  function handleResize() {
+    setWidth(window.innerWidth);
+    setHeight(window.innerHeight);
+  }
+  return (<>
+    <p>Window width: {width}px</p>
+    <p>Window height: {height}px</p>
 
-}
+  </>)
+};
 
-export default MyComponent;
+export default Mycomponent;
+

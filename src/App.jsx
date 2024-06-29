@@ -80,13 +80,11 @@ import List from "./Components/List.jsx";
 
 // export default App;
 
-
-
-import Mycomponent from './Mycomponent.jsx';
+import ComponentA from "./ComponentA.jsx";
 const App = () => {
   return(
  <>
-<Mycomponent />
+<ComponentA />
 
  </>
   )
