@@ -79,12 +79,12 @@ import List from "./Components/List.jsx";
 // };
 
 // export default App;
-
-import ComponentA from "./ComponentA.jsx";
+import Stopwatch from './Stopwatch';
 const App = () => {
   return(
  <>
-<ComponentA />
+
+<Stopwatch/>
 
  </>
   )
