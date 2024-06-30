@@ -79,16 +79,10 @@ import List from "./Components/List.jsx";
 // };
 
 // export default App;
-import Stopwatch from './Stopwatch';
-const App = () => {
-  return(
- <>
-
-<Stopwatch/>
-
- </>
+export default function App() {
+  return (
+    <h1 className="text-5xl font-bold underline">
+      Hello world!
+    </h1>
   )
-};
-
-export default App;
-
+}
