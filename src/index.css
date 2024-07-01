@@ -327,6 +327,3 @@ padding: 10px 0;
     background-color: red;
 } */
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
